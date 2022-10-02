@@ -18,7 +18,7 @@ contract FeeCollector {
         require(msg.sender == owner, "Only owner can withdraw");
         require(amount <= balance, "Insufficient funds");
         
-        destAddr.transfer(amount); // send funds to given address
+        destAddr.transfer(amount);
         balance -= amount;
     }
 }
